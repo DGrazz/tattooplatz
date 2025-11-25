@@ -17,10 +17,10 @@ const Index = () => {
 
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
-    // Pequeño delay para la animación de salida del login
+    // Esperar a que el login desaparezca antes de mostrar las puertas
     setTimeout(() => {
       setShowContent(true);
-    }, 300);
+    }, 800);
   };
 
   return (
@@ -29,8 +29,8 @@ const Index = () => {
         {!showContent ? (
           <motion.div 
             key="login"
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6 }}
           >
             <LoginForm onSuccess={handleLoginSuccess} />
           </motion.div>

@@ -27,28 +27,34 @@ const Index = () => {
     <div className="relative overflow-hidden">
       <AnimatePresence mode="wait">
         {!showContent ? (
-          <motion.div key="login">
+          <motion.div 
+            key="login"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
             <LoginForm onSuccess={handleLoginSuccess} />
           </motion.div>
         ) : (
           <>
-            {/* Door opening effect */}
+            {/* Door opening effect - Left door */}
             <motion.div
               key="door-left"
               initial={{ x: 0 }}
               animate={{ x: "-100%" }}
               transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-              className="fixed inset-0 left-0 w-1/2 bg-background z-50 border-r-2 border-primary/20"
+              className="fixed inset-0 left-0 w-1/2 bg-background z-50 border-r-2 border-primary/20 shadow-2xl"
               style={{
                 background: "linear-gradient(to right, hsl(var(--background)), hsl(var(--card)))",
               }}
             />
+            
+            {/* Door opening effect - Right door */}
             <motion.div
               key="door-right"
               initial={{ x: 0 }}
               animate={{ x: "100%" }}
               transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-              className="fixed inset-0 left-1/2 w-1/2 bg-background z-50 border-l-2 border-primary/20"
+              className="fixed inset-0 left-1/2 w-1/2 bg-background z-50 border-l-2 border-primary/20 shadow-2xl"
               style={{
                 background: "linear-gradient(to left, hsl(var(--background)), hsl(var(--card)))",
               }}

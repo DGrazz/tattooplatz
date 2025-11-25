@@ -19,7 +19,6 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
 
     setTimeout(() => {
       if (password === "admin") {
-        localStorage.setItem("proposal_access", "granted");
         onSuccess();
       } else {
         toast({

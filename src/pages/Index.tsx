@@ -8,15 +8,6 @@ const Index = () => {
   const [showContent, setShowContent] = useState(false);
   const [shouldAnimateDoors, setShouldAnimateDoors] = useState(false);
 
-  useEffect(() => {
-    const hasAccess = localStorage.getItem("proposal_access") === "granted";
-    if (hasAccess) {
-      setIsAuthenticated(true);
-      setShowContent(true);
-      // NO activar shouldAnimateDoors para saltar la animación en accesos previos
-    }
-  }, []);
-
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
     setShouldAnimateDoors(true);

@@ -22,7 +22,7 @@ export const PricingCard = () => {
 
           <div className="mb-8 text-center">
             <div className="mb-2">
-              <span className="text-3xl sm:text-5xl font-bold text-primary">3.000 CHF</span>
+              <span className="text-3xl sm:text-5xl font-bold text-primary whitespace-nowrap">3.000 CHF</span>
               <span className="ml-2 text-sm sm:text-lg text-muted-foreground">configuración inicial</span>
             </div>
             <div className="flex items-center justify-center gap-2">

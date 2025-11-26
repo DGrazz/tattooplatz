@@ -63,13 +63,13 @@ export const ProposalContent = () => {
           className="relative mx-auto max-w-5xl text-center"
         >
           <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
-            Automatiza tu Estudio{" "}
+            Más Clientes. Menos Gestión.{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Escala sin Límites
+              Todo en un solo sistema.
             </span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Una solución integral que combina automatización inteligente, gestión de reservas y presencia digital para transformar tu negocio.
+            Una solución que combina automatización inteligente, gestión de reservas y presencia digital para optimizar tu estudio.
           </p>
         </motion.div>
       </section>
@@ -83,7 +83,7 @@ export const ProposalContent = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Nuestros Servicios</h2>
+            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Nuestra propuesta</h2>
             <p className="text-lg text-muted-foreground">
               Tres pilares fundamentales para modernizar tu estudio
             </p>

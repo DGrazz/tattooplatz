@@ -30,7 +30,7 @@ export const PricingCard = () => {
               <span className="text-base sm:text-lg text-muted-foreground">/mes</span>
             </div>
             <div className="mt-4 inline-block rounded-full bg-primary/10 px-4 py-2">
-              <span className="text-sm font-semibold text-primary">La mensualidad se cobra solo cuando el sistema esté 100% operativo</span>
+              <span className="text-sm font-semibold text-primary">Mensualidad solo tras setup completo</span>
             </div>
           </div>
 

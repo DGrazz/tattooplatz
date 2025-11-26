@@ -116,29 +116,6 @@ export const ProposalContent = () => {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="px-6 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="mx-auto max-w-4xl rounded-2xl border border-primary/30 bg-gradient-to-br from-card to-secondary p-12 text-center shadow-[var(--glow-primary)]"
-        >
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
-            ¿Listo para Transformar tu Negocio?
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Contáctanos para comenzar y aprovecha el primer mes gratuito
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="rounded-lg bg-primary px-8 py-4 font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg"
-          >
-            Comenzar Ahora
-          </motion.button>
-        </motion.div>
-      </section>
     </motion.div>
   );
 };

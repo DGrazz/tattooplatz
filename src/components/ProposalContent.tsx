@@ -11,6 +11,7 @@ export const ProposalContent = () => {
       features: [
         "Detección de palabras clave configurables sin ayuda",
         "Respuestas automáticas a preguntas frecuentes",
+        "Respuestas del bot completamente personalizables",
         "Redirección directa a la herramienta de reservas",
         "Notificación al estudio cuando se recibe un mensaje fuera de las palabras clave",
         "Comunicación sobre disponibilidad de fechas",
@@ -35,7 +36,6 @@ export const ProposalContent = () => {
       description: "Herramienta exclusiva desarrollada para centralizar y optimizar la gestión de citas del estudio.",
       features: [
         "Sistema de reservas integrado",
-        "Sección para venta de merchandising",
         "Diseño responsivo, rápido y optimizado",
         "Navegación clara y enfocada en la experiencia del usuario",
         "Preparada para escalar con nuevas funcionalidades en el futuro",

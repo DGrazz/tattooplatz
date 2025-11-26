@@ -22,12 +22,12 @@ export const PricingCard = () => {
 
           <div className="mb-8 text-center">
             <div className="mb-2">
-              <span className="text-5xl font-bold text-primary">3.000 CHF</span>
-              <span className="ml-2 text-lg text-muted-foreground">configuración inicial</span>
+              <span className="text-3xl sm:text-5xl font-bold text-primary">3.000 CHF</span>
+              <span className="ml-2 text-sm sm:text-lg text-muted-foreground">configuración inicial</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <span className="text-4xl font-bold">300 CHF</span>
-              <span className="text-lg text-muted-foreground">/mes</span>
+              <span className="text-2xl sm:text-4xl font-bold">300 CHF</span>
+              <span className="text-base sm:text-lg text-muted-foreground">/mes</span>
             </div>
             <div className="mt-4 inline-block rounded-full bg-primary/10 px-4 py-2">
               <span className="text-sm font-semibold text-primary">Primer mes GRATIS</span>
@@ -35,7 +35,7 @@ export const PricingCard = () => {
           </div>
 
           <div className="space-y-4 border-t border-border pt-8">
-            <p className="mb-4 text-center font-semibold text-foreground">El precio incluye:</p>
+            <p className="mb-4 text-center font-semibold text-foreground">El precio mensual incluye</p>
             {[
               "Hosting profesional y seguro",
               "Soporte técnico continuo",

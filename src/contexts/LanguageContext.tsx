@@ -9,8 +9,21 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const detectBrowserLanguage = (): Language => {
+  const browserLang = navigator.language || navigator.languages?.[0] || 'es';
+  const langCode = browserLang.toLowerCase().split('-')[0];
+  
+  // Check if detected language is supported
+  if (langCode === 'es' || langCode === 'en' || langCode === 'de') {
+    return langCode as Language;
+  }
+  
+  // Default to Spanish if language not supported
+  return 'es';
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('es');
+  const [language, setLanguage] = useState<Language>(detectBrowserLanguage());
 
   const value: LanguageContextType = {
     language,

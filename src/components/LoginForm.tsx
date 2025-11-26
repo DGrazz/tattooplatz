@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Lock } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LoginFormProps {
   onSuccess: () => void;
@@ -12,6 +13,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,8 +24,8 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
         onSuccess();
       } else {
         toast({
-          title: "Contraseña incorrecta",
-          description: "Por favor, intenta nuevamente",
+          title: t.login.incorrectPassword,
+          description: t.login.tryAgain,
           variant: "destructive",
         });
         setPassword("");
@@ -53,9 +55,9 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
             <Lock className="h-10 w-10 text-primary" />
           </motion.div>
           
-          <h1 className="mb-2 text-3xl font-bold">Propuesta Confidencial</h1>
+          <h1 className="mb-2 text-3xl font-bold">{t.login.title}</h1>
           <p className="text-muted-foreground">
-            Introduce la contraseña para acceder
+            {t.login.subtitle}
           </p>
         </div>
 
@@ -63,7 +65,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
           <div className="relative">
             <Input
               type="password"
-              placeholder="Contraseña"
+              placeholder={t.login.password}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="h-14 border-border bg-card/50 px-4 text-lg backdrop-blur-sm transition-all focus:border-primary focus:shadow-[var(--glow-primary)]"
@@ -85,10 +87,10 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                   className="h-5 w-5 rounded-full border-2 border-primary-foreground border-t-transparent"
                 />
-                Verificando...
+                {t.login.verifying}
               </span>
             ) : (
-              "Acceder"
+              t.login.accessButton
             )}
           </motion.button>
         </form>

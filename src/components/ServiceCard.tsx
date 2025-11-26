@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ServiceCardProps {
   title: string;
@@ -11,6 +12,8 @@ interface ServiceCardProps {
 }
 
 export const ServiceCard = ({ title, description, features, icon: Icon, index }: ServiceCardProps) => {
+  const { t } = useLanguage();
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -30,7 +33,7 @@ export const ServiceCard = ({ title, description, features, icon: Icon, index }:
           <p className="mb-6 text-muted-foreground">{description}</p>
           
           <div className="space-y-3">
-            <p className="text-sm font-semibold text-primary">Características:</p>
+            <p className="text-sm font-semibold text-primary">{t.services.features}</p>
             <ul className="space-y-2">
               {features.map((feature, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">

@@ -2,44 +2,29 @@ import { motion } from "framer-motion";
 import { Bot, Calendar, Globe } from "lucide-react";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PricingCard } from "@/components/PricingCard";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 export const ProposalContent = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
-      title: "Bot de Instagram Inteligente",
-      description: "Automatiza la atención en mensajes directos, respondiendo únicamente cuando se detecta una intención real de reservar o solicitar información.",
-      features: [
-        "Detección de palabras clave configurables sin ayuda",
-        "Respuestas automáticas a preguntas frecuentes",
-        "Respuestas del bot completamente personalizables",
-        "Redirección directa a la herramienta de reservas",
-        "Notificación al estudio cuando se recibe un mensaje fuera de las palabras clave",
-        "Comunicación sobre disponibilidad de fechas",
-      ],
+      title: t.services.instagramBot.title,
+      description: t.services.instagramBot.description,
+      features: t.services.instagramBot.features,
       icon: Bot,
     },
     {
-      title: "Herramienta de Reservas",
-      description: "Herramienta exclusiva desarrollada para centralizar y optimizar la gestión de citas del estudio.",
-      features: [
-        "Acceso para cada artista, con posibilidad de ver, modificar o bloquear sus horarios",
-        "Panel que muestra todas las reservas del estudio en tiempo real",
-        "Funcionalidad para aceptar o rechazar solicitudes de cita",
-        "Control total sobre la disponibilidad general del equipo",
-        "Estadísticas para visualizar volumen de reservas y uso del sistema",
-        "Integración directa con el bot y la web",
-      ],
+      title: t.services.bookingTool.title,
+      description: t.services.bookingTool.description,
+      features: t.services.bookingTool.features,
       icon: Calendar,
     },
     {
-      title: "Página Web",
-      description: "Herramienta exclusiva desarrollada para centralizar y optimizar la gestión de citas del estudio.",
-      features: [
-        "Sistema de reservas integrado",
-        "Diseño responsivo, rápido y optimizado",
-        "Navegación clara y enfocada en la experiencia del usuario",
-        "Preparada para escalar con nuevas funcionalidades en el futuro",
-      ],
+      title: t.services.website.title,
+      description: t.services.website.description,
+      features: t.services.website.features,
       icon: Globe,
     },
   ];
@@ -51,6 +36,8 @@ export const ProposalContent = () => {
       transition={{ duration: 0.8 }}
       className="min-h-screen bg-background"
     >
+      <LanguageSelector />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-20 sm:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--gradient-hero),_transparent_50%)]" />
@@ -63,13 +50,13 @@ export const ProposalContent = () => {
           className="relative mx-auto max-w-5xl text-center"
         >
           <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
-            Más Clientes. Menos Gestión.{" "}
+            {t.hero.title1}{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              Todo en un solo sistema.
+              {t.hero.title2}
             </span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Una solución que combina automatización inteligente, gestión de reservas y presencia digital para optimizar tu estudio.
+            {t.hero.subtitle}
           </p>
         </motion.div>
       </section>
@@ -83,9 +70,9 @@ export const ProposalContent = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Nuestra propuesta</h2>
+            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{t.services.sectionTitle}</h2>
             <p className="text-lg text-muted-foreground">
-              Tres pilares fundamentales para modernizar tu estudio
+              {t.services.sectionSubtitle}
             </p>
           </motion.div>
 
@@ -106,9 +93,9 @@ export const ProposalContent = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Inversión</h2>
+            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{t.pricing.sectionTitle}</h2>
             <p className="text-lg text-muted-foreground">
-              Precio transparente con todo incluido
+              {t.pricing.sectionSubtitle}
             </p>
           </motion.div>
 

@@ -30,7 +30,7 @@ export const PricingCard = () => {
               <span className="text-base sm:text-lg text-muted-foreground">/mes</span>
             </div>
             <div className="mt-4 inline-block rounded-full bg-primary/10 px-4 py-2">
-              <span className="text-sm font-semibold text-primary">Primer mes GRATIS</span>
+              <span className="text-sm font-semibold text-primary">Primer mes de mensualidad GRATIS</span>
             </div>
           </div>
 

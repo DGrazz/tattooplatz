@@ -25,6 +25,7 @@ export const PricingCard = () => {
               <span className="text-3xl sm:text-5xl font-bold text-primary whitespace-nowrap">3.500 CHF</span>
               <span className="ml-2 text-sm sm:text-lg text-muted-foreground">Setup</span>
             </div>
+            <p className="text-sm text-muted-foreground mb-4">50% por adelantado • 50% al terminar</p>
             <div className="flex items-center justify-center gap-2">
               <span className="text-2xl sm:text-4xl font-bold">300 CHF</span>
               <span className="text-base sm:text-lg text-muted-foreground">/mes</span>

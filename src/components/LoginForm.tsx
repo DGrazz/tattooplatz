@@ -4,6 +4,7 @@ import { Lock } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 interface LoginFormProps {
   onSuccess: () => void;
@@ -36,6 +37,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
 
   return (
     <div className="flex min-h-screen items-center justify-center px-6">
+      <LanguageSelector />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--gradient-hero),_transparent_50%)]" />
       <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
       

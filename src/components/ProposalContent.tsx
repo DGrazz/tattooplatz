@@ -2,29 +2,44 @@ import { motion } from "framer-motion";
 import { Bot, Calendar, Globe } from "lucide-react";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PricingCard } from "@/components/PricingCard";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { LanguageSelector } from "@/components/LanguageSelector";
 
 export const ProposalContent = () => {
-  const { t } = useLanguage();
-  
   const services = [
     {
-      title: t.services.instagramBot.title,
-      description: t.services.instagramBot.description,
-      features: t.services.instagramBot.features,
+      title: "Smart Instagram Bot",
+      description: "Automates direct message handling, responding only when a genuine booking or information request is detected.",
+      features: [
+        "Configurable keyword detection without assistance",
+        "Automatic responses to frequently asked questions",
+        "Fully customizable bot responses",
+        "Direct redirection to the booking tool",
+        "Studio notification for messages outside keywords",
+        "Communication about date availability",
+      ],
       icon: Bot,
     },
     {
-      title: t.services.bookingTool.title,
-      description: t.services.bookingTool.description,
-      features: t.services.bookingTool.features,
+      title: "Booking Tool",
+      description: "Exclusive tool developed to centralize and optimize the studio's appointment management.",
+      features: [
+        "Access for each artist, with the ability to view, modify or block their schedules",
+        "Dashboard displaying all studio bookings in real-time",
+        "Functionality to accept or reject appointment requests",
+        "Complete control over the team's general availability",
+        "Statistics to visualize booking volume and system usage",
+        "Direct integration with the bot and website",
+      ],
       icon: Calendar,
     },
     {
-      title: t.services.website.title,
-      description: t.services.website.description,
-      features: t.services.website.features,
+      title: "Website",
+      description: "Exclusive tool developed to centralize and optimize the studio's appointment management.",
+      features: [
+        "Integrated booking system",
+        "Responsive, fast and optimized design",
+        "Clear navigation focused on user experience",
+        "Ready to scale with new features in the future",
+      ],
       icon: Globe,
     },
   ];
@@ -36,8 +51,6 @@ export const ProposalContent = () => {
       transition={{ duration: 0.8 }}
       className="min-h-screen bg-background"
     >
-      <LanguageSelector />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden px-6 py-20 sm:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--gradient-hero),_transparent_50%)]" />
@@ -50,13 +63,13 @@ export const ProposalContent = () => {
           className="relative mx-auto max-w-5xl text-center"
         >
           <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
-            {t.hero.title1}{" "}
+            More Clients. Less Management.{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              {t.hero.title2}
+              All in one system.
             </span>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            {t.hero.subtitle}
+            A solution that combines intelligent automation, booking management, and digital presence to optimize your studio.
           </p>
         </motion.div>
       </section>
@@ -70,9 +83,9 @@ export const ProposalContent = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{t.services.sectionTitle}</h2>
+            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Our Proposal</h2>
             <p className="text-lg text-muted-foreground">
-              {t.services.sectionSubtitle}
+              Three fundamental pillars to modernize your studio
             </p>
           </motion.div>
 
@@ -93,9 +106,9 @@ export const ProposalContent = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mb-16 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">{t.pricing.sectionTitle}</h2>
+            <h2 className="mb-4 text-4xl font-bold sm:text-5xl">Investment</h2>
             <p className="text-lg text-muted-foreground">
-              {t.pricing.sectionSubtitle}
+              Transparent pricing with everything included
             </p>
           </motion.div>
 

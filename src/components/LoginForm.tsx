@@ -18,7 +18,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
     setIsLoading(true);
 
     setTimeout(() => {
-      if (password === "admin") {
+      if (password === "BestStudioEver") {
         onSuccess();
       } else {
         toast({
